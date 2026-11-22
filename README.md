@@ -68,6 +68,7 @@ No frameworks, no npm packages, no bundler.
 ```
 profile-website/
 ├── index.html    # Page markup: hero, about, skills, projects, quiz, contact, footer
+├── favicon.svg   # "SJ" browser-tab icon
 ├── style.css     # Layout, light/dark theme variables, responsive rules
 ├── script.js     # Theme toggle, quiz logic, back-to-top button, footer year
 ├── .gitignore    # Keeps local screenshots and old drafts out of the repo
