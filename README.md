@@ -1,6 +1,6 @@
 # Samyak Jain — Profile Website
 
-**Live demo:** [samyakjain2237.github.io/profile-website](https://samyakjain2237.github.io/profile-website/)
+**Live demo:** [samyakjain2237.github.io/profile-website](https://samyakjain2237.github.io/profile-website/)  
 **Repository:** [github.com/samyakjain2237/profile-website](https://github.com/samyakjain2237/profile-website)
 
 A personal profile and portfolio website built with plain HTML, CSS and JavaScript. It has no frameworks, no libraries and no build step. I made it for the **AI & Prompt Engineering Lab, Module 3: AI for Web Development** in my 2nd year of B.Tech CSE (AI/ML) at JECRC University, Jaipur.
