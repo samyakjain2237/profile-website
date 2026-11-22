@@ -387,3 +387,18 @@ button:focus-visible {
     text-align: center;
   }
 }
+/* ===== Back to top button ===== */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}

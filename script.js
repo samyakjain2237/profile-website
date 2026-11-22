@@ -193,3 +193,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Start the quiz
   showQuestion();
 });
+/* =====================================================
+   4. BACK TO TOP BUTTON + FOOTER YEAR
+   ===================================================== */
+window.addEventListener("scroll", function () {
+  var btn = document.getElementById("back-to-top");
+  if (window.scrollY > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+});
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
