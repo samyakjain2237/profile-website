@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Samyak Jain — B.Tech CSE (AI/ML) student at JECRC University, Jaipur.">
+  <title>Samyak Jain | Profile</title>
+  <!-- Link the external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Loaded in <head> (not deferred) so the saved theme applies before the page paints -->
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <!-- Header: name, tagline and in-page navigation -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#top" class="logo">SJ</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- Theme toggle: icon is filled in by script.js -->
+        <li>
+          <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light mode">🌙</button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hero" id="top">
+      <p class="hero-hello">Hi, I'm</p>
+      <h1>Samyak Jain</h1>
+      <p class="tagline">AI/ML student · Web developer · Filmmaker</p>
+      <a href="#projects" class="btn">See my work</a>
+    </div>
+  </header>
+
+  <!-- Main content of the page -->
+  <main>
+
+    <!-- About Me section -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I'm a 2nd-year <strong>B.Tech CSE (AI/ML)</strong> student at
+        <strong>JECRC University, Jaipur</strong>. I enjoy turning ideas into
+        working code, and I'm curious about how machines learn.
+      </p>
+      <!-- List of interests shown as small tags -->
+      <ul class="tags" aria-label="Interests">
+        <li>AI / ML</li>
+        <li>Web Development</li>
+        <li>Filmmaking</li>
+        <li>Photography</li>
+      </ul>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul class="skills-grid">
+        <li class="skill-card">Python</li>
+        <li class="skill-card">C</li>
+        <li class="skill-card">HTML</li>
+        <li class="skill-card">CSS</li>
+        <li class="skill-card">Git</li>
+      </ul>
+    </section>
+
+    <!-- Projects section: each project is an <article> -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <h3>C to Python Programs</h3>
+          <p>A collection of classic C programs rewritten in Python to compare syntax and logic across both languages.</p>
+          <a href="https://github.com/samyakjain2237/c-to-python-programs" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Python Debugging with AI</h3>
+          <p>Finding and fixing bugs in Python code with the help of AI tools, with notes on each fix.</p>
+          <a href="https://github.com/samyakjain2237/python-debugging-with-ai" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Quiz section: content is rendered by script.js -->
+    <section id="quiz" class="section">
+      <h2>Web Dev Quiz</h2>
+      <p>Test yourself with 5 quick questions on HTML, CSS and JavaScript.</p>
+
+      <div class="quiz-card">
+        <!-- Question screen -->
+        <div id="quiz-question-view">
+          <p class="quiz-progress" id="quiz-progress">Question 1 of 5</p>
+          <h3 class="quiz-question" id="quiz-question">Loading…</h3>
+          <div class="quiz-options" id="quiz-options"></div>
+          <!-- aria-live lets screen readers announce right/wrong -->
+          <p class="quiz-feedback" id="quiz-feedback" aria-live="polite"></p>
+          <button type="button" class="btn" id="quiz-next" disabled>Next</button>
+        </div>
+
+        <!-- Result screen (hidden until the quiz ends) -->
+        <div id="quiz-result-view" class="quiz-result" hidden>
+          <h3>Quiz complete!</h3>
+          <p class="quiz-score" id="quiz-score">0 / 5</p>
+          <p id="quiz-message"></p>
+          <button type="button" class="btn" id="quiz-restart">Restart</button>
+        </div>
+      </div>
+
+      <!-- Message for visitors with JavaScript turned off -->
+      <noscript><p>Please enable JavaScript to take the quiz.</p></noscript>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Want to collaborate or just say hi? Reach me here:</p>
+      <!-- <address> is the semantic tag for contact info -->
+      <address class="contact-links">
+        <a href="mailto:jainsamyak2237@gmail.com" class="btn">Email Me</a>
+        <a href="https://github.com/samyakjain2237" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub</a>
+      </address>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Samyak Jain · Built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+</body>
+</html>
