@@ -193,3 +193,41 @@ document.addEventListener("DOMContentLoaded", function () {
   // Start the quiz
   showQuestion();
 });
+
+/* =====================================================
+   4. BACK TO TOP BUTTON + FOOTER YEAR
+   Wrapped in DOMContentLoaded because script.js runs in <head>
+   (kept there on purpose so the theme loads before the page paints)
+   ===================================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const topBtn = document.getElementById("back-to-top");
+  if (!topBtn) return;
+
+  // Show the button after 300px, at most once per frame
+  let ticking = false;
+  function updateTopBtn() {
+    topBtn.classList.toggle("is-visible", window.scrollY > 300);
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateTopBtn);
+    }
+  }, { passive: true });
+  updateTopBtn();   // correct state if the page loads already scrolled
+
+  topBtn.addEventListener("click", function () {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    // Move keyboard focus to the top so it is not lost
+    const top = document.querySelector("header");
+    if (top) {
+      top.setAttribute("tabindex", "-1");
+      top.focus({ preventScroll: true });
+    }
+  });
+});
